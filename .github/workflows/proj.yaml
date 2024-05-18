@@ -5,10 +5,11 @@ on:
     paths:
       - 'chart/**'
       - 'Dockerfile'
+      - '.github/workflows/*'
 
 jobs:
   build:
-    runs-on: srv-app
+    runs-on: self-hosted
     env:
       TAG: $GITHUB_RUN_NUMBER
       REG_USER: ${{ secrets.REG_USER }}
@@ -26,7 +27,7 @@ jobs:
     - name: docker push
       run: docker push $REG_USER/diplom:$TAG
   deploy:
-    runs-on: srv-app
+    runs-on: self-hosted
     env:
       KUBECONFIG: /etc/rancher/k3s/test.yaml
       TAG: $GITHUB_RUN_NUMBER
