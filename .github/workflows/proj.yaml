@@ -19,13 +19,13 @@ jobs:
       uses: actions/checkout@v4
 
     - name: docker login
-      run: docker login -u ${REG_USER} -p ${REG_PASSWORD}
+      run: docker login -u $REG_USER -p $REG_PASSWORD
 
     - name: docker build
-      run: docker build -t ${REG_USER}/diplom:$TAG .
+      run: docker build -t $REG_USER/diplom:$TAG .
 
     - name: docker push
-      run: docker push ${REG_USER}/diplom:$TAG
+      run: docker push $REG_USER/diplom:$TAG
   deploy:
     runs-on: self-hosted
     env:
