@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: app-dep
-          image: sairus/diplom:v1.1
+          image: awertonn/diplom:v1.1
           command: [ '/bin/sh' ]
           args: ['-c', 'python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:3003']
           ports:
