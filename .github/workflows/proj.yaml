@@ -22,10 +22,10 @@ jobs:
       run: docker login -u $REG_USER -p $REG_PASSWORD
 
     - name: docker build
-      run: docker build -t $REG_USER/diplom:$TAG .
+      run: docker build . -t $REG_USER/diplom:1.1
 
     - name: docker push
-      run: docker push $REG_USER/diplom:$TAG
+      run: docker push $REG_USER/diplom:1.1
   deploy:
     runs-on: self-hosted
     env:
