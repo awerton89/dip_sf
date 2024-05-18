@@ -1,0 +1,48 @@
+name: build and deploy app
+
+on:
+  push:
+    paths:
+      - 'chart/**'
+      - 'Dockerfile'
+
+jobs:
+  build:
+    runs-on: srv-app
+    env:
+      TAG: $GITHUB_RUN_NUMBER
+      REG_USER: ${{ secrets.REG_USER }}
+      REG_PASSWORD: ${{ secrets.REG_PASSWORD }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: docker login
+      run: docker login -u $REG_USER -p $REG_PASSWORD
+
+    - name: docker build
+      run: docker build -t $REG_USER/diplom:$TAG .
+
+    - name: docker push
+      run: docker push $REG_USER/diplom:$TAG
+  deploy:
+    runs-on: srv-app
+    env:
+      KUBECONFIG: /etc/rancher/k3s/test.yaml
+      TAG: $GITHUB_RUN_NUMBER
+      REG_USER: ${{ secrets.REG_USER }}
+      REG_PASSWORD: ${{ secrets.REG_PASSWORD }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: create ns
+      run: kubectl create ns diplom
+
+    - name: deploy app
+      run: helm upgrade -i --set app-dep.tag=$TAG --namespace diplom app-dep ./chart
+
+    - name: cleanup
+      run: |
+       rm -rf ${{ github.workspace }}/*
+       rm -rf ${{ github.workspace }}/.*
