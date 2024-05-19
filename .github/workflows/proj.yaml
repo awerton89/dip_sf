@@ -37,14 +37,14 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - name: create ns
-      run: kubectl create ns diplom
+#    - name: create ns
+#      run: kubectl create ns diplom
 
     - name: substitude vars
       run: envsubst < $GITHUB_WORKSPACE/chart/templates/app_deployment.yaml.tmpl > $GITHUB_WORKSPACE/chart/templates/app_deployment.yaml
 
     - name: deploy app
-      run: helm upgrade -i --set app-dep.tag=$TAG --namespace diplom app-dep ./chart
+      run: helm upgrade -i --set app-dep.tag=$TAG --namespace diplom --create-namespace app-dep ./chart
 
     - name: cleanup
       run: |
