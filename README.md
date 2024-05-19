@@ -58,7 +58,7 @@ b) Подготавливаем настройки для нашего K8S кл�
 <code> # pip3 install -r kubespray/requirements.txt </code> <br>
 с) Запускаем установку K8S кластера. <br>
 - Yandex Cloud:
-<img src="https://github.com/awerton89/dip_sf/tree/main/images/K8S_cluster.jpg">
+<img src="https://github.com/awerton89/dip_sf/main/images/K8S_cluster.jpg">
 <H3>4)Кластер установлен и настроен. Готов к деплою приложения. Спринт 1. закончен.</H3>
 <h1> Спринт 2. </h1>
 <H2> Цель: </H2>
