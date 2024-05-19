@@ -24,18 +24,16 @@ d) Master и Worker ноды будем разворачивать в <b> Yandex
 e) Мониторинг SRV сервера и K8S кластера.<br>
 h) Отправка оповещаний в telegram о доступности нашего приложения.  <br> 
 <br>
-<b>Задание 2. Первоначальная настройка сервера SRV </b>.  <br>
+<b> 2. Первоначальная настройка сервера SRV </b>.  <br>
 a) Устанавливаем все нужные для достижения нашей цели приложения: <br>
    - Создаём ssh ключ в моём случаи <b> "~/.ssh/id_rsa.pub" </b> для terraform и ansible. 
    - Python3, PIP3, GIT, остальные зависимости.  
    - Устанавливаем Helm и Kubectl
-   - Скачиваем Kubespray по адресу: <a href="https://github.com/kubernetes-sigs/kubespray/releases/tag/v2.19.0"> Kubespray. </a>
-   - Ansible (нужную версию Ansible нужно смотреть в документации выбранной версии Kubespray).
+   - Ansible
    - Устанавливаем <b> Terraform </b> по инструкции: <a href="https://cloud.yandex.ru/docs/tutorials/infrastructure-management/terraform-quickstart"> Инструкция по установке и настройке Terraform в Ya облаке</a>. <br>
 b) Создаём папку для нашего проекта. <br>
 c) Делаем git clone проекта в нашу папку. <br>
-<code># git clone https://github.com/Suirus777/skillfactory-diplom.git </code><br>
-d) Распоковываем из архива наш скачаный Kubespray в корень проекта. <br>
+<code># git clone https://github.com/awerton89/dip_sf.git </code><br>
 <br>
 <b>Задание 3. Начинаем настройку и установку кластера K8S. </b><br> 
    a) Настраиваем Terraform. Переходим в папку с манифестом Terraform который разворачивает серверную инфраструктуру для нашего K8S кластера.<br>
