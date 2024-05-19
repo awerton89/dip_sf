@@ -41,7 +41,7 @@ jobs:
 #      run: kubectl create ns diplom
 
     - name: substitude vars
-      run: envsubst < $GITHUB_WORKSPACE/chart/templates/app_deployment.yaml.tmpl > $GITHUB_WORKSPACE/chart/templates/app_deployment.yaml
+      run: envsubst < $GITHUB_WORKSPACE/chart/app_deployment.yaml.tmpl > $GITHUB_WORKSPACE/chart/templates/app_deployment.yaml
 
     - name: deploy app
       run: helm upgrade -i --set app-dep.tag=$TAG --namespace diplom --create-namespace app-dep ./chart
