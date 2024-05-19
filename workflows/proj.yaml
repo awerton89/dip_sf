@@ -1,0 +1,54 @@
+name: build and deploy app
+
+on:
+  push:
+    paths:
+      - 'chart/**'
+      - 'Dockerfile'
+      - '.github/workflows/*'
+
+jobs:
+  build:
+    runs-on: self-hosted
+    env:
+#      TAG: ${{ github.run_number }}
+      REG_USER: ${{ secrets.REG_USER }}
+      REG_PASSWORD: ${{ secrets.REG_PASSWORD }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: docker login
+      run: docker login -u $REG_USER -p $REG_PASSWORD
+
+    - name: docker build
+      run: docker build . -t $REG_USER/diplom:1.${{ github.run_number }}
+
+    - name: docker push
+      run: docker push $REG_USER/diplom:1.${{ github.run_number }}
+  deploy:
+    runs-on: self-hosted
+        needs:
+          - build
+    env:
+      KUBECONFIG: /home/alex/dip/k3s.yaml
+      TAG: ${{ github.run_number }}
+      REG_USER: ${{ secrets.REG_USER }}
+      REG_PASSWORD: ${{ secrets.REG_PASSWORD }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: create ns
+      run: kubectl create ns diplom
+
+    - name: substitude vars
+      run: envsubst < $GITHUB_WORKSPACE/chart/templates/app_deployment.yaml.tmpl > $GITHUB_WORKSPACE/chart/templates/app_deployment.yaml
+
+    - name: deploy app
+      run: helm upgrade -i --set app-dep.tag=$TAG --namespace diplom app-dep ./chart
+
+    - name: cleanup
+      run: |
+       rm -rf ${{ github.workspace }}/*
+       rm -rf ${{ github.workspace }}/.*
