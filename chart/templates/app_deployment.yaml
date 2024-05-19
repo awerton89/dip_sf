@@ -4,7 +4,7 @@ metadata:
   name: app-dep
   labels:
     k8s-app: app-dep
-#    gitlab: diplom
+    github: diplom
 
 spec:
   replicas: 1
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: app-dep
-          image: $REG_USER/diplom:1.${{ github.run_number }}
+          image: awertonn/diplom:1.12
           command: [ '/bin/sh' ]
           args: ['-c', 'python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:3003']
           ports:
