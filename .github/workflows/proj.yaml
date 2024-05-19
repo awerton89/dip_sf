@@ -28,8 +28,7 @@ jobs:
       run: docker push $REG_USER/diplom:1.${{ github.run_number }}
   deploy:
     runs-on: self-hosted
-      needs:
-        - build
+    needs: build
     env:
       KUBECONFIG: /home/alex/dip/k3s.yaml
       TAG: $GITHUB_RUN_NUMBER
