@@ -10,16 +10,15 @@ SkillFactory / Group 45
 
 - В качествет облачного провайдера был выбран <b> Yandex Cloud</b> <br>
 - В качестве описания серверной инфраструктуры в облаке был выбран <b>Terraform</b> <br>
-- В качестве K8S cluster был выбран <b>Kubespray</b> <br>
+- В качестве K8S cluster был выбран <b>K3S</b> <br>
 - Cluster K8S будет разворачиваться при помощи <b>Ansible</b> <br>
-- Для достижения данной цели использовал отличную инструкцию: <b><a href="https://git.cloud-team.ru/lections/kubernetes_setup/raw/master/presentation.pdf">Установка кластера Kubernetes</a> и <a href="https://www.youtube.com/watch?v=WFXlr0bVTAQ">Youtube</a> </b><br>
-- Так же для автоматизации будем использовать Bash скрипты.<br>
+
 
 <H4> Установка и первоначальная настройка сервера <b> SRV </b> </H4>
 <b>1. Устанавливаем в Yandex Cloud сервер SRV </b> <br>
 Задача данного сервера: <br>
 a) На данном сервере будем хранить весь наш проект и управлять им. <br>
-b) Из данного сервера будем разворачивать <b> K8S cluster </b> использовать будем <b> Kubespray </b> разворачивать будем при помощи <b> Ansible </b> и управлять им при помощи <b>Kubectl и Helm </b>.<br>
+b) Из данного сервера будем разворачивать <b> K8S cluster </b> управление будет происходить при помощи <b>Kubectl и Helm </b>.<br>
 с) На данном сервере будет выполняться <b> CI/CD piplines </b>. <br>
 d) Master и Worker ноды будем разворачивать в <b> Yandex Cloud</b> при помощи <b>Terraform .</b> <br>
 e) Мониторинг SRV сервера и K8S кластера.<br>
