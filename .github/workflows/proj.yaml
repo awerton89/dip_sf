@@ -28,6 +28,8 @@ jobs:
       run: docker push $REG_USER/diplom:1.${{ github.run_number }}
   deploy:
     runs-on: self-hosted
+      needs:
+        - build
     env:
       KUBECONFIG: /home/alex/dip/k3s.yaml
       TAG: $GITHUB_RUN_NUMBER
@@ -46,7 +48,7 @@ jobs:
     - name: deploy app
       run: helm upgrade -i --set app-dep.tag=$TAG --namespace diplom --create-namespace app-dep ./chart
 
-    - name: cleanup
-      run: |
-       rm -rf ${{ github.workspace }}/*
-       rm -rf ${{ github.workspace }}/.*
+#    - name: cleanup
+#      run: |
+#       rm -rf ${{ github.workspace }}/*
+#       rm -rf ${{ github.workspace }}/.*
