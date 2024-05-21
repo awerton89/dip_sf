@@ -69,30 +69,19 @@ Cобрать и задеплоить приложение из нашего Git
 3) Описываем стадию деплоя в Helm. <br>
 
 <H3>Задание 1. Клонируем репозиторий, собираем его на сервере srv.</H3>
-- Создал в корне проекта папку "CICD" и клонировал в неё приложение из github.<br> 
-- Путь: https://github.com/Suirus777/skillfactory-diplom/tree/main/CICD/APP-for-Docker
-- Исправил все ошибки в Docker фалах приложения, настройках приложения и изменил логин и пароль. <br>
+- Kлонируем приложение в свой github.<br> 
+- Исправляем все ошибки в Docker фалах приложения, настройках приложения и изменяем логин и пароль. <br>
 - Чувствительные данные такие как логин и пароль и т.д вынес в отдельный файл "/data/app.var" и добавил в gitignor.
-<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/app.var.JPG">
-- Собрал Docker образ и запустил приложение в Docker. <br>
+- Собираем Docker образ и запускаем приложение в Docker. <br>
 <code># Docker-compose up -d </code> <br>
 - В резальтате чего создаются 2 докер контенера, Python приложение и БД к нему <br>
 - Проверяем приложение на SRV сервере:
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_App.JPG">
  - Подготавливаем CI/CD для автоматизации сборки образа, нашего приложения и деплоя его в Docker registry. <br>
- - В качестве Docker registry буду использовать Dockerhub.  Логинимся в Dockerhub: <br>
- <code># Docker login </code> <br>
-<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/dockerhub_rep.JPG">
- - В качестве CI/CD будем использовать Gitlab-CI <br>
- - Cоздаём проект в gitlab.com, мной был создан проект "diplom". <br>
- - Путь к проекту: https://gitlab.com/suirus777/diplom/-/tree/main <br>
- - Заливаем проект приложения в gitlab. <br>
- <code># git add .  <br>
-# git commit -m "CICD" <br>
-# git push -u origin main </code> <br>
- - Создаём файл, для нашего Pipeline - <a href="https://github.com/Suirus777/skillfactory-diplom/blob/main/CICD/CICD/.gitlab-ci.yml"><b> .gitlab-ci.yml </b></a> в котором будем описывать этапы сборки образа приложения, а в дальнейшем, деплоя в K8S кластер. <br>  
+ - В качестве Docker registry буду использовать Dockerhub. 
+ - В качестве CI/CD будем использовать Github <br>
+ - Создаём файл, для нашего Pipeline - <a href=https://github.com/awerton89/dip_sf/blob/main/workflows/proj.yaml </b></a> в котором будем описывать этапы сборки образа приложения, а в дальнейшем, деплоя в K8S кластер. <br>  
  - Создаём первую стадию Pipeline для приложения - build <br>
- - На сервере SRV, настраиваем Gitlab-Runner по инструкции: <a href="https://docs.gitlab.com/ee/ci/runners/configure_runners.html#use-tags-to-control-which-jobs-a-runner-can-run"> Инструкция </a>.<br>
  - Создаём нужные нам переменные для хранения чувствительных данных и другой информации:
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/git_var.JPG">
  - На первом этапе Pipeline должен, войти в DockerHub, логин пароль хранятся в gitlab/Variables, на основании Docker файлов создать образ приложения и присвоить ему тэг из переменной "TAG" и запушить наше приложение с тэгом в DockerHub. <br>
