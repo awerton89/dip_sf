@@ -87,7 +87,7 @@ Cобрать и задеплоить приложение из нашего Git
  - Сдедующим шагом, создаём манифесты, для деплоя приложения в Kubespray, на основе Docker образов приложения: <br>
  - Деплоим приложение в K8S кластер
  - Результат деплоя: <br>
- <img src="Kube_app.JPG">
+ <img src="https://github.com/awerton89/dip_sf/tree/main/images/Kube_app.JPG">
 <H3>Задание 2. Описываем приложение в Helm-чарт.</H3>
 - На основании написаных манифестов создаём <b>helm chart</b>.  <br>
 - Путь к helm chart: https://github.com/awerton89/dip_sf/tree/main/chart <br>
