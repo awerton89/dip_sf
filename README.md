@@ -103,10 +103,8 @@ Cобрать и задеплоить приложение из нашего Git
 - Стадия Deploy должна на основе Helm chart, деплоить приложение в K8S кластер. Тригером является изменение тэга: <br>
 - Результаты работы CI/CD Pipeline: <br>
   Образы в Dockerhub:
- <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Docker_hub_tag.JPG ">  
-  Присвоение тэгов образам:
- <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_Helm.JPG">
- Результат работы Pipeline:
+ <img src="https://github.com/swerton89/dip_sf/blob/main/images/Docker_hub_tag.JPG ">  
+  Результат работы Pipeline:
  <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/CICD_deploy_app.JPG">
  <H3>Pipeline работает согласно задачи спринта. Спринт 2 закончен.</H3>
 <h1> Спринт 3. </h1>
