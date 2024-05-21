@@ -178,4 +178,5 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Telegram_alert.JPG"> 
 <h2> Спринт 3. Закончен. </h2>
 <h1> Все задания выполнены, диплом закончен! Заранее спасибо!!! </h1>
-<a href="http://158.160.4.27"> Адресс работающего приложения!!!!!!!!!!! </a>
+Адрес работающего приложения:
+<a href="http:/188.243.49.239:1112"> 158.160.4.27 </a>
