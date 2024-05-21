@@ -76,7 +76,7 @@ Cобрать и задеплоить приложение из нашего Git
 <code># Docker-compose up -d </code> <br>
 - В резальтате чего создаются 2 докер контенера, Python приложение и БД к нему <br>
 - Проверяем приложение на SRV сервере:
-<img src="https://github.com/awerton89/dip_sf/tree/main/images/Docker_App.JPG">
+<img src="https://github.com/awerton89/dip_sf/main/images/Docker_App.JPG">
  - Подготавливаем CI/CD для автоматизации сборки образа, нашего приложения и деплоя его в Docker registry. <br>
  - В качестве Docker registry буду использовать Dockerhub. 
  - В качестве CI/CD будем использовать Github <br>
@@ -87,7 +87,7 @@ Cобрать и задеплоить приложение из нашего Git
  - Сдедующим шагом, создаём манифесты, для деплоя приложения в Kubespray, на основе Docker образов приложения: <br>
  - Деплоим приложение в K8S кластер
  - Результат деплоя: <br>
- <img src="https://github.com/awerton89/dip_sf/tree/main/images/Kube_app.JPG">
+ <img src="https://github.com/awerton89/dip_sf/main/images/Kube_app.JPG">
 <H3>Задание 2. Описываем приложение в Helm-чарт.</H3>
 - На основании написаных манифестов создаём <b>helm chart</b>.  <br>
 - Путь к helm chart: https://github.com/awerton89/dip_sf/tree/main/chart <br>
