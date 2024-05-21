@@ -96,7 +96,7 @@ Cобрать и задеплоить приложение из нашего Git
 <code># kubectl create namespace diplom </code><br>
 -  Деплоим наше Helm chart в K8S кластер, в созданый namespace для нашего приложения "diplom"
 -  Результат, наше приложение работает в K8S кластере
- <img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Kube_app.JPG">
+ <img src="https://github.com/awerton89/dip_sf/blob/main/images/Kube_app2.JPG">
 <H3>Задание 3. Описываем стадию деплоя в Helm.</H3>
 - Создаём вторую стадию Pipeline для приложения - <b>"deploy" </b>.<br>
 - Стадия Deploy должна на основе Helm chart, деплоить приложение в K8S кластер. Тригером является изменение тэга: <br>
