@@ -118,7 +118,7 @@ Cобрать и задеплоить приложение из нашего Git
 <H3>Задание 1. Настройка сборки логов. </H3>
 - Для сборки логов буду использовать стэк <b> Fluentd/Clickhouse/Loghouse </b>. <br>
 - Устанавливать буду с помощью helm. <br>
-- Путь к настройкам стэка: https://github.com/Suirus777/skillfactory-diplom/tree/main/monitor/loghouse <br>
+- Путь к настройкам стэка: https://github.com/awerton89/dip_sf/tree/main/monitor/loghouse <br>
 - Вначале добавим repo для Loghouse <br>
 <code> # helm repo add loghouse https://flant.github.io/loghouse/charts/  </code><br>
 - Устанавливаем стэк <b> Fluentd/Clickhouse/Loghouse </b> в namespace "loghouse". <br>
@@ -133,7 +133,7 @@ loghouse-f7c55bbf7-9kl2j                                          2/2     Runnin
 loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Completed   0          76m  </code><br>
 - Создаём Dashbourd для сборки логов нашего приложения и кластера K8S <br>
 - Результат:
-<img src="https://github.com/Suirus777/skillfactory-diplom/blob/main/images/Loghouse1.JPG">
+<img src="https://github.com/awerton89/dip_sf/blob/main/images/Loghouse1.JPG">
 <H3>Задание 2. Выбор метрик для мониторинга. </H3>   
 - Для мониторнига сервера SRV, доступности нашего приложения "APP-DEP" и кластера "K8S" буду использовать стэк <b>Grafana\Prometheus\Blackbox\Node Exporter\Alertmanager </b><br>
 - Весь стэк буду разворачивать на SRV сервере в Docker-compose. <br>
