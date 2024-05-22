@@ -1,6 +1,5 @@
 # Дипломный проект.
 # <a href="http://188.243.49.239"> Работающее приложение </a>
-SkillFactory / Group 45
 <H1> Спринт 1. </H1>
 <H2> Создать Kubernets Cluster </H2>
 
