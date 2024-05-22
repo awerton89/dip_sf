@@ -170,5 +170,5 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 - Результат работы алертинга, отправка алертов о статусе APP-DEP в telegram: <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/Telegram_alert.JPG"> 
 <h2> Спринт 3. Закончен. </h2>
-<h1> Все задания выполнены, диплом закончен! Заранее спасибо!!! </h1>
+<h1> Все задания выполнены.Диплом закончен! </h1>
 
