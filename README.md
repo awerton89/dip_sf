@@ -149,17 +149,17 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 <b>- В итоге в кластре K8S будут работать ПОДЫ :</b>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/All_PODS_K8S.JPG">
 
-<H3>Задание 3. Настройка дашборда. </H3>
-- Для сборки метрик будем использовать "Grafana"
-- Используем 3 дашборда:
+<H3>Задание 3. Настройка дашборда. </H3> <br>
+- Для сборки метрик будем использовать "Grafana" <br>
+- Используем 3 дашборда: <br>
  <img src="https://github.com/awerton89/dip_sf/blob/main/images/Dashboards.JPG"> <br>
-- Сбор метрик состояния сервера SRV при помощи "Node Exporter":
+- Сбор метрик состояния сервера SRV при помощи "Node Exporter": <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/Node_exporter.JPG"><br>
-- Сбор метрик о доступности нашего сайта (app-dep) при помощи "BlackBox":
+- Сбор метрик о доступности нашего сайта (app-dep) при помощи "BlackBox": <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/HTTP_Satus_APP_Grafana.JPG"> <br>
-- Сбор метрик о состоянии K8S кластера и на podа - APP-DEP:
+- Сбор метрик о состоянии K8S кластера и на podа - APP-DEP: <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/K8S_cluster_grafana.JPG"><br>
-<H3>Задание 4. Алертинг. </H3>
+<H3>Задание 4. Алертинг. </H3>  <br>
 - Для отправки алертов буду использовать <b> Telegram
 - Создал в Telegram нового бота.
 - Был установлен и настроен Docker контенер для отправки сообщений в Telegram. <br> 
