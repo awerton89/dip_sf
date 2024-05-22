@@ -156,7 +156,7 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/K8S_cluster_grafana.JPG"><br>
 
 <H3>Задание 4. Алертинг. </H3>  <br>
-- Для отправки уведомлений будем использовать <b> Telegram
+- Для отправки уведомлений будем использовать <b> Telegram </b>
 - Создал в Telegram нового бота.
 - Был установлен и настроен Docker контенер для отправки сообщений в Telegram. <br> 
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/telegrambot.JPG">
