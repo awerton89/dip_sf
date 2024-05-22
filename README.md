@@ -142,9 +142,8 @@ loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Comple
 - Путь к манифестам: https://github.com/awerton89/dip_fs/tree/main/monitor/Prometheus_stack/k8s  <br>
 - Был создан namespace "monitoring" и в него задеплоин манифест: <br>
 <code># kubectl create namespace monitoring <br>
-   #Kubectl apply -f .  </code> <br>
-- Результат:  <br>
-<code> root@diplom:/home/odmin# kubectl get pods -n monitoring                 <br>
+  
+<code> root@diplom:/home/admin# kubectl get pods -n monitoring                 <br>
 NAME                                     READY   STATUS    RESTARTS   AGE      <br>
    prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m    </code>  <br>
 <b>- В итоге в кластре K8S будут работать ПОДЫ :</b> <br> 
