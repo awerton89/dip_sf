@@ -146,20 +146,17 @@ loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Comple
 <code> root@diplom:/home/admin# kubectl get pods -n monitoring                 <br>
 NAME                                     READY   STATUS    RESTARTS   AGE      <br>
    prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m    </code>  <br>
-<b>- В итоге в кластре K8S будут работать ПОДЫ :</b>
+<b>- В итоге в кластре K8S будут работать ПОДЫ :</b> <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/All_PODS_K8S.JPG">
 
 <H3>Задание 3. Настройка дашборда. </H3> <br>
 - Для сборки метрик будем использовать "Grafana" <br>
 - Используем 3 дашборда: <br>
  <img src="https://github.com/awerton89/dip_sf/blob/main/images/Dashboards.JPG"> <br>
- 
-- Сбор метрик состояния сервера SRV при помощи "Node Exporter": <br>
+ - Сбор метрик состояния сервера SRV при помощи "Node Exporter": <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/Node_exporter.JPG"><br>
-
 - Сбор метрик о доступности нашего сайта (app-dep) при помощи "BlackBox": <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/HTTP_Satus_APP_Grafana.JPG"> <br>
-
 - Сбор метрик о состоянии K8S кластера и на podа - APP-DEP: <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/K8S_cluster_grafana.JPG"><br>
 
