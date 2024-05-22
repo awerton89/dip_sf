@@ -141,7 +141,7 @@ loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Comple
 - Были созданы манифесты K8S для деплоя Prometheus и сбора метрик кластера <br>
 - Путь к манифестам: https://github.com/awerton89/dip_fs/tree/main/monitor/Prometheus_stack/k8s  <br>
 - Был создан namespace "monitoring" и в него задеплоин манифест:
-<code># kubectl create namespace monitoring <br>
+<code># kubectl create namespace monitoring <br> </code>
   
 <code> root@diplom:/home/admin# kubectl get pods -n monitoring                 <br>
 NAME                                     READY   STATUS    RESTARTS   AGE      <br>
