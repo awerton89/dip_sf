@@ -146,7 +146,7 @@ loghouse-migrate-tables-e07085a0-f7f6-42ce-a5c4-cad5d5773e467qr   0/1     Comple
 <code> root@diplom:/home/admin# kubectl get pods -n monitoring                 <br>
 NAME                                     READY   STATUS    RESTARTS   AGE      <br>
    prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m    </code>  <br>
-<b>- В итоге в кластре K8S будут работать ПОДЫ :</b> <br> 
+<b>- В итоге в кластре K8S будут работать ПОДЫ :</b>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/All_PODS_K8S.JPG">
 
 <H3>Задание 3. Настройка дашборда. </H3>
