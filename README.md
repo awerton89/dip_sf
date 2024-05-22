@@ -160,13 +160,17 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/K8S_cluster_grafana.JPG"><br>
 <H3>Задание 4. Алертинг. </H3>
 - Для отправки алертов буду использовать <b> Telegram </b>. <br>
-- Создал в Telegram нового бота - <b> SkillFactory_diplom </b> . <br>
+- Создал в Telegram нового бота.
 - Был установлен и настроен Docker контенер для отправки сообщений в Telegram. <br> 
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/telegrambot.JPG">
+
 - Все чувствительные данные были вынесены в отдельный файл "/data/tele.var" и добавлен в .gitignor. <br>
+
 - Добавляем Telegram Bot в стэк Prometheus\Grafana: https://github.com/awerton89/dip_sf/blob/main/monitor/Prometheus_stack/docker-compose.yml <br> 
+
 - Настройка отправки сообщений: https://github.com/awerton89/dip_sf/blob/main/monitor/Prometheus_stack/alertmanager/alertmanager.yml <br>
-- Результат работы алертинга, отправка алертов о статусе APP-DEP в telegram: <br>
+
+- Работа алертинга,: <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/Telegram_alert.JPG"> 
 <h2> Спринт 3. Закончен. </h2>
 <h1> Все задания выполнены.Диплом закончен! </h1>
