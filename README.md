@@ -159,7 +159,7 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 - Сбор метрик о состоянии K8S кластера и на podа - APP-DEP: <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/K8S_cluster_grafana.JPG"><br>
 <H3>Задание 4. Алертинг. </H3>
-- Для отправки алертов буду использовать <b> Telegram </b>. <br>
+- Для отправки алертов буду использовать <b> Telegram
 - Создал в Telegram нового бота.
 - Был установлен и настроен Docker контенер для отправки сообщений в Telegram. <br> 
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/telegrambot.JPG">
