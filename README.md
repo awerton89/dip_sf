@@ -54,8 +54,6 @@ c) Делаем git clone проекта в нашу папку. <br>
 <code> terraform init </code> <br>
    - Если всё было правильно настроено, то инициализация должна пройти без ошибок.  <br>
 b) Подготавливаем настройки для нашего K8S кластера который будет установлен на нодах. Все настройки хранятся в папке <b>/k3s_install</b>. <br>
-   - Устанавливаем требуемые приложения: <br>
-<code> # pip3 install -r kubespray/requirements.txt </code> <br>
 с) Запускаем установку K8S кластера. <br>
 - Yandex Cloud:
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/K8S_cluster.jpg">
