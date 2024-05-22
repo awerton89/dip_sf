@@ -165,7 +165,6 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 - Создал в Telegram нового бота.
 - Был установлен и настроен Docker контенер для отправки сообщений в Telegram. <br> 
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/telegrambot.JPG">
-   
 - Все чувствительные данные были вынесены в отдельный файл "/data/tele.var" и добавлен в .gitignor. <br>
 - Добавляем Telegram Bot в стэк Prometheus\Grafana: https://github.com/awerton89/dip_sf/blob/main/monitor/Prometheus_stack/docker-compose.yml <br> 
 - Настройка отправки сообщений: https://github.com/awerton89/dip_sf/blob/main/monitor/Prometheus_stack/alertmanager/alertmanager.yml <br>
