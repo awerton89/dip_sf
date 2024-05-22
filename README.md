@@ -148,9 +148,10 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
    prometheus-deployment-599bbd9457-xmdmz   1/1     Running   0          113m    </code>  <br>
 <b>- В итоге в кластре K8S будут работать ПОДЫ :</b> <br> 
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/All_PODS_K8S.JPG">
+
 <H3>Задание 3. Настройка дашборда. </H3>
 - Для сборки метрик будем использовать "Grafana"
-- Используем 3 дашборда: <br>
+- Используем 3 дашборда:
  <img src="https://github.com/awerton89/dip_sf/blob/main/images/Dashboards.JPG"> <br>
 - Сбор метрик состояния сервера SRV при помощи "Node Exporter":
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/Node_exporter.JPG"><br>
