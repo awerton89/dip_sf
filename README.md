@@ -168,7 +168,7 @@ NAME                                     READY   STATUS    RESTARTS   AGE      <
 - Все чувствительные данные были вынесены в отдельный файл "/data/tele.var" и добавлен в .gitignor. <br>
 - Добавляем Telegram Bot в стэк Prometheus\Grafana: https://github.com/awerton89/dip_sf/blob/main/monitor/Prometheus_stack/docker-compose.yml <br> 
 - Настройка отправки сообщений: https://github.com/awerton89/dip_sf/blob/main/monitor/Prometheus_stack/alertmanager/alertmanager.yml <br>
-- Работа алертинга,: <br>
+- Работа алертинга: <br>
 <img src="https://github.com/awerton89/dip_sf/blob/main/images/Telegram_alert.JPG">
 
 <h2> Спринт 3. Закончен. </h2>
